@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Spam Detection - Naive Bayes</h2>
+        <form method="POST">
+            <label for="message">Enter your message:</label>
+            <input type="text" name="message" required>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h3>Prediction: <span style="color:#00ffff">{{ prediction }}</span></h3>
+        {% endif %}
+    </div>
+</body>
+</html>
